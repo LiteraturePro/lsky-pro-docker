@@ -9,6 +9,7 @@ on:
 
 env:
   TZ: Asia/Shanghai 
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
   docker:
@@ -45,3 +46,10 @@ jobs:
         run: |
           docker build -t literature/lsky-pro-docker:latest .
           docker push literature/lsky-pro-docker:latest
+  deploy:
+      name: Deploy app
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: superfly/flyctl-actions/setup-flyctl@master
+        - run: flyctl deploy --remote-only
