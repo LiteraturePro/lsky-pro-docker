@@ -39,7 +39,7 @@ COPY ./ports.conf.template /etc/apache2/
 COPY entrypoint.sh /
 WORKDIR /var/www/html/
 VOLUME /var/www/html
-ENV WEB_PORT 8089
+ENV WEB_PORT 8080
 RUN chmod a+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apachectl","-D","FOREGROUND"]
