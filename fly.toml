@@ -1,5 +1,4 @@
 # fly.toml file generated for imgs on 2023-06-23T20:48:21+08:00
-
 app = "imgs"
 kill_signal = "SIGINT"
 kill_timeout = 5
