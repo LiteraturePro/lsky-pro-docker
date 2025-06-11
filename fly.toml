@@ -2,6 +2,8 @@
 app = 'imgs'
 primary_region = 'sin'
 
+swap_size_mb = 512
+
 [build]
   image = "literature/lsky-pro-docker"
 
