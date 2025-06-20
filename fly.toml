@@ -14,7 +14,7 @@ source="lsky_storage"
 destination="/var/www/html"
 
 [[vm]]
-  memory = '512mb'
+  memory = '768mb'
   cpu_kind = 'shared'
   cpus = 1
 
